@@ -4,10 +4,17 @@
 # чтобы убедиться, что ваша музыкальная коллекция
 # не потеряна.
 
-def is_file_exist(filename: str):
-    pass
+import os
 
+def is_file_exist(filename: str):
+    if os.path.exists(filename):
+        return "Существует!"
+    else:
+        return "- такого не нашел :("
 
 if __name__ == "__main__":
     filename = "favorite_playlist.txt"
-    print(filename, is_file_exist(filename))
+    
+print(filename, is_file_exist(filename))
+    
+
